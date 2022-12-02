@@ -15,10 +15,11 @@ class DrumMachine extends React.Component {
         super(props)
         this.state = {
             display: "Let's hear!",
+            buttonColor: " bg-red-300",
         }
 
         this.onKeyPress = this.onKeyPress.bind(this);
-        this.handleAudioKeys = this.handleAudioKeys.bind(this);
+        this.handleAudioAndColor = this.handleAudioAndColor.bind(this);
     }
 
     //
@@ -27,56 +28,50 @@ class DrumMachine extends React.Component {
     handleAudio = (event) => {
         let audio = document.getElementById(event.currentTarget.textContent);
         if (audio.paused) {
-            audio.play()
+            audio.play();
         } else {
             audio.currentTime = 0
         }
         this.setState({ display: event.currentTarget.id });
     }
 
-
-    //função pai para reproduzir com argumento key (utilizar abaixo!)
-    handleAudioKeys = (key) => {
-        let audio = document.getElementById(key);
-        if (audio.paused) {
-            audio.play()
-        } else {
-            audio.currentTime = 0
-        }
+    //função para reproduzir áudio e trocar a cor durante 200ms
+    handleAudioAndColor = (id) => {
+        document.getElementById(id).click();
+        document.getElementById(id).classList.add("bg-violet-700");
+        setTimeout(() => document.getElementById(id).classList.remove("bg-violet-700"), 100);
     }
-    //função pai para reproduzir com argumento key (utilizar abaixo!)
-
 
     //
     //reproduzir audio nas teclas
     //
     onKeyPress(event) {
         if (event.keyCode === 81) {
-            document.getElementById("Sample 1").click();
+            this.handleAudioAndColor("Sample 1")
         }
         if (event.keyCode === 87) {
-            document.getElementById("Sample 2").click();
+            this.handleAudioAndColor("Sample 2");
         }
         if (event.keyCode === 69) {
-            document.getElementById("Sample 3").click();
+            this.handleAudioAndColor("Sample 3");
         }
         if (event.keyCode === 65) {
-            document.getElementById("Sample 4").click();
+            this.handleAudioAndColor("Sample 4");
         }
         if (event.keyCode === 83) {
-            document.getElementById("Dilla Snare").click();
+            this.handleAudioAndColor("Dilla Snare");
         }
         if (event.keyCode === 68) {
-            document.getElementById("Open-HH").click();
+            this.handleAudioAndColor("Open-HH");
         }
         if (event.keyCode === 90) {
-            document.getElementById("Kick-n'-Hat").click();
+            this.handleAudioAndColor("Kick-n'-Hat");
         }
         if (event.keyCode === 88) {
-            document.getElementById("Kick").click();
+            this.handleAudioAndColor("Kick");
         }
         if (event.keyCode === 67) {
-            document.getElementById("Closed-HH").click();
+            this.handleAudioAndColor("Closed-HH");
         }
     }
 
