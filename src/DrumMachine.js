@@ -26,13 +26,11 @@ class DrumMachine extends React.Component {
     //
     handleAudio = (event) => {
         let audio = document.getElementById(event.currentTarget.textContent);
-
         if (audio.paused) {
             audio.play()
         } else {
             audio.currentTime = 0
         }
-
         this.setState({ display: event.currentTarget.id });
     }
 
@@ -103,7 +101,7 @@ class DrumMachine extends React.Component {
     render() {
 
         // Tailwind Styles
-        const buttonStyle = "drum-pad bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded";
+        const buttonStyle = "drum-pad bg-blue-500 text-white font-bold py-4 px-8 rounded active:bg-violet-700";
 
         return (
             <div id='drum-machine' className='flex flex-row bg-white p-10 gap-8 rounded'>
