@@ -52,40 +52,31 @@ class DrumMachine extends React.Component {
     //
     onKeyPress(event) {
         if (event.keyCode === 81) {
-            this.handleAudioKeys("Q")
-            this.setState({ display: "Sample 1" });
+            document.getElementById("Sample 1").click();
         }
         if (event.keyCode === 87) {
-            this.handleAudioKeys("W")
-            this.setState({ display: "Sample 2" });
+            document.getElementById("Sample 2").click();
         }
         if (event.keyCode === 69) {
-            this.handleAudioKeys("E")
-            this.setState({ display: "Sample 3" });
+            document.getElementById("Sample 3").click();
         }
         if (event.keyCode === 65) {
-            this.handleAudioKeys("A")
-            this.setState({ display: "Sample 4" });
+            document.getElementById("Sample 4").click();
         }
         if (event.keyCode === 83) {
-            this.handleAudioKeys("S")
-            this.setState({ display: "Dilla Snare" });
+            document.getElementById("Dilla Snare").click();
         }
         if (event.keyCode === 68) {
-            this.handleAudioKeys("D")
-            this.setState({ display: "Open-HH" });
+            document.getElementById("Open-HH").click();
         }
         if (event.keyCode === 90) {
-            this.handleAudioKeys("Z")
-            this.setState({ display: "Kick-n'-Hat" });
+            document.getElementById("Kick-n'-Hat").click();
         }
         if (event.keyCode === 88) {
-            this.handleAudioKeys("X")
-            this.setState({ display: "Kick" });
+            document.getElementById("Kick").click();
         }
         if (event.keyCode === 67) {
-            this.handleAudioKeys("C")
-            this.setState({ display: "Closed-HH" });
+            document.getElementById("Closed-HH").click();
         }
     }
 
