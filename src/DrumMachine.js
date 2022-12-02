@@ -14,7 +14,7 @@ class DrumMachine extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            display: "Let's hear :)",
+            display: "Let's hear!",
         }
 
         this.onKeyPress = this.onKeyPress.bind(this);
