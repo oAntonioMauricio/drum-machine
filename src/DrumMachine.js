@@ -15,7 +15,6 @@ class DrumMachine extends React.Component {
         super(props)
         this.state = {
             display: "Let's hear!",
-            buttonColor: " bg-red-300",
         }
 
         this.onKeyPress = this.onKeyPress.bind(this);
