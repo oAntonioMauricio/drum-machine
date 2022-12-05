@@ -37,8 +37,10 @@ class DrumMachine extends React.Component {
     //função para reproduzir áudio e trocar a cor durante 200ms
     handleAudioAndColor = (id) => {
         document.getElementById(id).click();
+        document.getElementById(id).classList.remove("bg-blue-500");
         document.getElementById(id).classList.add("bg-violet-700");
         setTimeout(() => document.getElementById(id).classList.remove("bg-violet-700"), 100);
+        setTimeout(() => document.getElementById(id).classList.add("bg-blue-500"), 100);
     }
 
     //
