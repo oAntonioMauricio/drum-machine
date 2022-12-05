@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Sample1 from "./assets/drumSounds/Sample 1.wav";
-import Sample2 from "./assets/drumSounds/Sample 2.wav";
-import Sample3 from "./assets/drumSounds/Sample 3.wav";
-import Sample4 from "./assets/drumSounds/Sample 4.wav";
-import DillaSnare from "./assets/drumSounds/Dilla Snare.wav";
-import OpenHH from "./assets/drumSounds/OpenHH.wav";
-import KickNHat from "./assets/drumSounds/KickNHat.wav";
-import Kick from "./assets/drumSounds/Kick.wav";
-import ClosedHH from "./assets/drumSounds/ClosedHH.wav";
+import Sample1 from "../assets/drumSounds/Sample 1.wav";
+import Sample2 from "../assets/drumSounds/Sample 2.wav";
+import Sample3 from "../assets/drumSounds/Sample 3.wav";
+import Sample4 from "../assets/drumSounds/Sample 4.wav";
+import DillaSnare from "../assets/drumSounds/Dilla Snare.wav";
+import OpenHH from "../assets/drumSounds/OpenHH.wav";
+import KickNHat from "../assets/drumSounds/KickNHat.wav";
+import Kick from "../assets/drumSounds/Kick.wav";
+import ClosedHH from "../assets/drumSounds/ClosedHH.wav";
 
 class DrumMachine extends React.Component {
     constructor(props) {
@@ -91,7 +91,7 @@ class DrumMachine extends React.Component {
         const buttonStyle = "drum-pad bg-blue-500 text-white font-bold py-4 px-8 rounded active:bg-violet-700";
 
         return (
-            <div id='drum-machine' className='flex flex-row bg-white p-10 gap-8 rounded'>
+            <div id='drum-machine' className='flex flex-row bg-white dark:bg-slate-400 p-10 gap-8 rounded'>
 
                 <div className='grid grid-cols-3 gap-2'>
                     <button id="Sample 1" className={buttonStyle} onClick={this.handleAudio.bind(this)}>Q
