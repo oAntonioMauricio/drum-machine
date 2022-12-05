@@ -6,7 +6,7 @@ import Switcher from "./Components/Switcher";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header bg-slate-100 dark:bg-black">
         <Switcher />
         <DrumMachine />
       </header>

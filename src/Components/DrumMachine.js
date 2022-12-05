@@ -14,7 +14,7 @@ class DrumMachine extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            display: "Let's hear!",
+            display: "Let's hear you!",
         }
 
         this.onKeyPress = this.onKeyPress.bind(this);
@@ -88,12 +88,12 @@ class DrumMachine extends React.Component {
     render() {
 
         // Tailwind Styles
-        const buttonStyle = "drum-pad bg-blue-500 text-white font-bold py-4 px-8 rounded active:bg-violet-700";
+        const buttonStyle = "drum-pad bg-blue-500 text-white font-bold p-4 rounded active:bg-violet-700";
 
         return (
-            <div id='drum-machine' className='flex flex-row bg-white dark:bg-slate-400 p-10 gap-8 rounded'>
+            <div id='drum-machine' className='container w-4/5 md:w-3/6 md:flex md:flex-row p-6 gap-8 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700'>
 
-                <div className='grid grid-cols-3 gap-2'>
+                <div className='grid grid-cols-3 gap-3 md:w-1/2'>
                     <button id="Sample 1" className={buttonStyle} onClick={this.handleAudio.bind(this)}>Q
                         <audio src={Sample1} className='clip' id='Q' />
                     </button>
@@ -130,8 +130,8 @@ class DrumMachine extends React.Component {
                         <audio src={ClosedHH} className='clip' id='C' />
                     </button>
                 </div>
-                <div id="display" className='flex flex-col justify-center w-1/3'>
-                    <p id="display" className='bg-blue-400 rounded w-52 py-4 px-8'>{this.state.display}</p>
+                <div id="display" className='flex flex-col justify-center md:w-1/2'>
+                    <p id="display" className='py-4 px-8 w-full text-black dark:text-white '>{this.state.display}</p>
                 </div>
 
             </div>
