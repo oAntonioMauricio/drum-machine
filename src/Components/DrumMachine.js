@@ -47,33 +47,47 @@ class DrumMachine extends React.Component {
     //reproduzir audio nas teclas
     //
     onKeyPress(event) {
-        if (event.keyCode === 81) {
-            this.handleAudioAndColor("Sample 1")
+
+        switch (event.keyCode) {
+            case 81:
+                this.handleAudioAndColor("Sample 1");
+                break;
+
+            case 87:
+                this.handleAudioAndColor("Sample 2");
+                break;
+
+            case 69:
+                this.handleAudioAndColor("Sample 3");
+                break;
+
+            case 65:
+                this.handleAudioAndColor("Sample 4");
+                break;
+
+            case 83:
+                this.handleAudioAndColor("Dilla Snare");
+                break;
+
+            case 68:
+                this.handleAudioAndColor("Open-HH");
+                break;
+
+            case 90:
+                this.handleAudioAndColor("Kick-n'-Hat");
+                break;
+
+            case 88:
+                this.handleAudioAndColor("Kick");
+                break;
+
+            case 67:
+                this.handleAudioAndColor("Closed-HH");
+                break;
+
+            default:
         }
-        if (event.keyCode === 87) {
-            this.handleAudioAndColor("Sample 2");
-        }
-        if (event.keyCode === 69) {
-            this.handleAudioAndColor("Sample 3");
-        }
-        if (event.keyCode === 65) {
-            this.handleAudioAndColor("Sample 4");
-        }
-        if (event.keyCode === 83) {
-            this.handleAudioAndColor("Dilla Snare");
-        }
-        if (event.keyCode === 68) {
-            this.handleAudioAndColor("Open-HH");
-        }
-        if (event.keyCode === 90) {
-            this.handleAudioAndColor("Kick-n'-Hat");
-        }
-        if (event.keyCode === 88) {
-            this.handleAudioAndColor("Kick");
-        }
-        if (event.keyCode === 67) {
-            this.handleAudioAndColor("Closed-HH");
-        }
+        
     }
 
     //adicionar monitorização de teclado
